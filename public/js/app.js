@@ -7,7 +7,7 @@ const forecast=document.querySelector('p.forecast')
 weatherform.addEventListener('submit',(e)=>{
     e.preventDefault()
   const loc=search.value
- fetch('http://localhost:3000/weather?address='+loc).then((response)=>{
+ fetch('/weather?address='+loc).then((response)=>{
     response.json().then((data)=>{
         if(data.error)
         {
